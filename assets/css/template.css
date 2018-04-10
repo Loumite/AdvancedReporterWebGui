@@ -1,0 +1,949 @@
+/*
+  >> Font Imports
+*/
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Montserrat-Thin";
+  src: url("../fonts/Montserrat-Thin.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "PatuaOne";
+  src: url("../fonts/PatuaOne.ttf") format('truetype');
+}
+
+/*
+  >> Body
+*/
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #8199a3;
+  text-align: left;
+  background-color: #444b54;
+}
+
+body.light-body {
+  background-color: #eef1f5;
+}
+
+/*
+  >> Link(s)
+*/
+
+a,
+a:focus {
+  color: #68808A;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #fe6860;
+  text-decoration: none;
+}
+
+::-moz-selection {
+  color: white;
+  background-color: #fe6860;
+}
+
+::selection {
+  color: white;
+  background-color: #fe6860;
+}
+
+/*
+  >> Scrollbar
+*/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);  
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background-color: rgba(254, 104, 96, 1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);  
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  border-radius: 0.25rem;
+  background-color: rgba(254, 104, 96, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); 
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/*
+  >> Buttons
+*/
+
+.btn-primary {
+  color: #fff;
+  background-color: #fe6860;
+  border-color: #fe6860;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #F15B53;
+  border-color: #E54F47;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: none;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #fe6860;
+  border-color: #fe6860;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #F15B53;
+  border-color: #E54F47;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-secondary:focus, .btn-secondary.focus {
+  box-shadow: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-success:focus, .btn-success.focus {
+  box-shadow: none;
+}
+
+.btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-success.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-info:focus, .btn-info.focus {
+  box-shadow: none;
+}
+
+.btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus,
+.show > .btn-info.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-warning:focus, .btn-warning.focus {
+  box-shadow: none;
+}
+
+.btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning:not(:disabled):not(.disabled).active:focus,
+.show > .btn-warning.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-danger:focus, .btn-danger.focus {
+  box-shadow: none;
+}
+
+.btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger:not(:disabled):not(.disabled).active:focus,
+.show > .btn-danger.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-light:focus, .btn-light.focus {
+  box-shadow: none;
+}
+
+.btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus,
+.show > .btn-light.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-dark:focus, .btn-dark.focus {
+  box-shadow: none;
+}
+
+.btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus,
+.show > .btn-dark.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-outline-primary {
+  color: #fe6860;
+  background-color: transparent;
+  background-image: none;
+  border-color: #fe6860;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #fe6860;
+  border-color: #fe6860;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  box-shadow: none;
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: #fe6860;
+  background-color: transparent;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #fe6860;
+  border-color: #fe6860;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-outline-secondary:focus, .btn-outline-secondary.focus {
+  box-shadow: none;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-secondary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-outline-success:focus, .btn-outline-success.focus {
+  box-shadow: none;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-success.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-outline-info:focus, .btn-outline-info.focus {
+  box-shadow: none;
+}
+
+.btn-outline-info:not(:disabled):not(.disabled):active:focus, .btn-outline-info:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-info.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-outline-warning:focus, .btn-outline-warning.focus {
+  box-shadow: none;
+}
+
+.btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-warning.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-outline-danger:focus, .btn-outline-danger.focus {
+  box-shadow: none;
+}
+
+.btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-danger.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-outline-light:focus, .btn-outline-light.focus {
+  box-shadow: none;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-light.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-outline-dark:focus, .btn-outline-dark.focus {
+  box-shadow: none;
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-dark.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-link {
+  font-weight: 400;
+  color: #fe6860;
+  background-color: transparent;
+}
+
+.btn-link:hover {
+  color: #F15B53;
+  text-decoration: underline;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-link:focus, .btn-link.focus {
+  text-decoration: underline;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.btn-link:disabled, .btn-link.disabled {
+  color: #6c757d;
+}
+
+/*
+  >> Alerts
+*/
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+.alert-primary {
+  color: #CB352D;
+  background-color: #FF8E86;
+  border-color: #FF8E86;
+}
+
+.alert-primary hr {
+  border-top-color: #E54F47;
+}
+
+.alert-primary .alert-link {
+  color: #B21C14;
+}
+
+/*
+  >> Badge
+*/
+
+.badge-primary {
+  color: #fff;
+  background-color: #fe6860;
+}
+
+.badge-primary[href]:hover, .badge-primary[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #F15B53;
+}
+
+/*
+  >> Dropdown
+*/
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(129,153,163,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(129,153,163,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(129,153,163,0.75);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #fe6860;
+}
+
+/*
+  >> Forms
+*/
+
+.form-control {
+  font-family: "Montserrat-Bold", sans-serif;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #8290a3;
+  background-color: #dde3ec;
+  background-clip: padding-box;
+  border: 1px solid #dde3ec;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #8290a3;
+  background-color: #dde3ec;
+  border-color: #c3ccda;
+  outline: 0;
+  box-shadow: none;
+}
+
+/*
+  >> List Group
+*/
+
+.list-group-item-primary.list-group-item-action.active {
+  color: #fff;
+  background-color: #E54F47;
+  border-color: #E54F47;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #fe6860;
+  border-color: #fe6860;
+}
+
+/*
+  >> Modals
+*/
+
+.modal-title {
+  cursor: default;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.modal-header .close:focus {
+  outline: 0;
+}
+
+/*
+  >> Navs
+*/
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #fe6860;
+}
+
+/*
+  >> Popover
+*/
+
+.popover-header {
+  color: #444b54;
+}
+
+.popover-body {
+  padding: 0.5rem 0.75rem;
+  color: #8199a3;
+}
+
+/*
+  >> Progressbar
+*/
+
+.progress-bar {
+  background-color: #fe6860;
+}
+
+/*
+  >> Utilities
+*/
+
+.text-primary {
+  color: #fe6860!important;
+}
+
+.bg-primary {
+  background-color: #fe6860!important;
+}
+
+/*
+  >> Form Icon
+*/
+
+.form-icon {
+  display: block;
+  position: relative;
+}
+
+.form-icon > i {
+  font-size: 22px;
+}
+
+.form-icon.fc-left > i {
+  position: absolute;
+  top: 12px;
+  left: 12.5px;
+}
+
+.form-icon.fc-left > input.form-control {
+  padding-left: 45px;
+}
+
+.form-icon.fc-right > i {
+  position: absolute;
+  top: 12px;
+  right: 12.5px;
+}
+
+.form-icon.fc-right > input.form-control {
+  padding-right: 45px;
+}
+
+/*
+  >> Pagination
+*/
+
+.page-link,
+.page-link:focus {
+  color: #fe6860;
+  box-shadow: none;
+}
+
+.page-link:hover {
+  color: #fe6860;
+  box-shadow: none;
+}
+
+.page-item.active .page-link {
+  background-color: #E54F47;
+  border-color: #E54F47;
+}
+
+/*
+  >> Login
+*/
+
+.login-box {
+  background-color: white;
+  display: block;
+  margin: 90px 0 0 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 325px;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(129,153,163,0.50);
+  -moz-box-shadow: 3px 3px 0px 0px rgba(129,153,163,0.50);
+  box-shadow: 3px 3px 0px 0px rgba(129,153,163,0.50);
+}
+
+.login-box > .header {
+  background-color: #444b54;
+  display: block;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.login-box > .header > img {
+  margin: -64px 0 0 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 128px;
+  height: 128px;
+}
+
+.login-box > .header > h2 {
+  font-family: "PatuaOne", cursive;
+  cursor: default;
+  text-align: center;
+  margin: 0;
+  padding: 5px 0 15px 0;
+}
+
+.login-box > .body {
+  padding: 25px 15px;
+}
+
+.login-box > .body > form {
+  margin: 0;
+}
+
+.login-box > .body > form > input.form-control {
+  margin-bottom: 7.5px;
+}
+
+.login-box > .body > p.cpw_key {
+  font-size: 14px;
+  text-align: center;
+  cursor: default;
+  margin: 0 0 15px 0;
+}
+
+.login-info-box {
+  padding-top: 30px;
+}
+
+.login-info-box > p.ca {
+  text-align: center;
+  margin: 0;
+}
+
+.login-info-box > p.small {
+  text-align: center;
+  cursor: default;
+  margin: 0;
+}
+
+/*
+  >> Error
+*/
+
+.error-body {
+  width: 100%;
+  padding: 0 15px;
+  margin: 120px 0 0 0;
+}
+
+.error-body > img {
+  display: block;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.error-body > h2 {
+  font-family: "PatuaOne", cursive;
+  font-size: 40px;
+  color: #444b54;
+  cursor: default;
+  text-align: center;
+  margin: 0;
+}
+
+.error-body > p {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+.error-body > a,
+.error-body > a:focus {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #fe6860;
+  display: table;
+  padding: 15px 30px;
+  border-radius: 0.25rem;
+  margin: 15px 0 0 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.error-body > a:hover {
+  color: white;
+  background-color: #F15B53;
+}
+
+/*
+  >> Content
+*/
+
+.content {
+  background-color: #eef1f5;
+  float: left;
+}
+
+.content-breadcrumb {
+  background-color: white;
+  border-top: 1px solid #444b54;
+  border-radius: 0;
+  margin-bottom: 15px;
+}
+
+.content-breadcrumb > li {
+  color: #8199a3;
+}
+
+.content-breadcrumb > li.active {
+  color: #68808A;
+}
+
+/*
+  >> Footer
+*/
+
+.footer {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+  margin-top: 15px;
+}
+
+.footer > .left {
+  float: left;
+  width: 50%;
+}
+
+.footer > .left > p {
+  cursor: default;
+  margin: 0;
+}
+
+.footer > .right {
+  float: left;
+  width: 50%;
+}
+
+.footer > .right > ul {
+  list-style: none;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.footer > .right > ul > li {
+  display: inline-block;
+}
+
+.footer > .right > ul > li::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #8199a3;
+  content: "|";
+}
+
+.footer > .right > ul > li:first-child::before {
+  padding: 0;
+  content: "";
+}
+
+/*
+  >> Widget
+*/
+
+.widget {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  border-radius: 0.2rem;
+}
+
+.widget > .left {
+  float: left;
+  text-align: center;
+  width: 20%;
+}
+
+.widget > .left > i {
+  font-size: 30px;
+  padding: 25% 0 0 0;
+}
+
+.widget > .right {
+  float: right;
+  text-align: right;
+  width: 80%;
+}
+
+.widget > .right > .title {
+  cursor: default;
+  margin: 0;
+}
+
+.widget > .right > p.value {
+  font-style: italic;
+  margin: 0;
+}
+
+/*
+  >> Portlet
+*/
+
+.portlet {
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 0 15px;
+}
+
+.portlet > .portlet-header {
+  font-family: "PatuaOne", cursive;
+  padding: 15px 0;
+  border-bottom: 1px solid #8199a3;
+}
+
+.portlet > .portlet-header > .portlet-title {
+  cursor: default;
+  margin: 0;
+}
+
+.portlet > .portlet-body {
+  padding: 15px 0;
+}
+
+/*
+  >> Edit Report
+*/
+
+#er_form {
+  margin: 0;
+}
+
+#er_form > select.form-control {
+  margin-bottom: 10px;
+}
+
+#er_form > p.title {
+  color: #444b54;
+  font-weight: bold;
+  cursor: default;
+  margin: 0 0 10px 0;
+}
+
+#er_form > textarea.form-control {
+  resize: none;
+  height: 115px;
+  width: 100%;
+}
+
+#er_form > p.wc {
+  font-size: 12px;
+  text-align: right;
+  margin: 10px 0 0 0;
+}
+
+/*
+  >> Create User
+*/
+
+#cu-form {
+  margin: 0;
+}
+
+#cu-form > .form-icon {
+  margin-bottom: 10px;
+}
+
+/*
+  >> User Avatar
+*/
+
+.user_avatar {
+  display: block;
+  margin: 0 0 0 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 0.25rem;
+}
+
+/*
+  >> Remove User Form
+*/
+
+#ru-form {
+  margin: 0;
+}
+
+#ru-form > input.form-control {
+  margin: 0 0 10px 0;
+}
+
+/*
+  >> Change Account Settings
+*/
+
+#cas-form {
+  margin: 0;
+}
+
+#cas-form > input.form-control {
+  margin-bottom: 10px;
+}
+
+/*
+  >> Settings Form
+*/
+
+#set-form {
+  margin: 0;
+}
+
+#set-form > .row > .col-md-6 > p.form-title {
+  font-weight: bold;
+  color: #444b54;
+  cursor: default;
+  margin: 0 0 10px 0;
+}
+
+#set-form > .row > .col-md-6 > input {
+  margin: 0 0 10px 0;
+}
+
+#set-form > .row > .col-md-6 > textarea {
+  resize: none;
+  height: 115px;
+  margin: 0 0 10px 0;
+}
+
+#set-form > button {
+  margin-top: 5px;
+}
+
+/*
+  >> Submit Report Form
+*/
+
+#sr-form > textarea.form-control {
+  resize: none;
+  height: 105px;
+  margin-bottom: 10px;
+}
+
+#sr-form > p.wc {
+  font-family: "PatuaOne", cursive;
+  font-size: 12px;
+  text-align: right;
+  margin: 0 0 10px 0;
+}

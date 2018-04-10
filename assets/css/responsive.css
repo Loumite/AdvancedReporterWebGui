@@ -1,0 +1,78 @@
+/*
+  >> Font Imports
+*/
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Montserrat-Thin";
+  src: url("../fonts/Montserrat-Thin.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "PatuaOne";
+  src: url("../fonts/PatuaOne.ttf") format('truetype');
+}
+
+/*
+  >> Responsive
+*/
+
+@media(max-width: 768px) {
+  .widget > .left {
+    float: none;
+    flex-wrap: unset;
+    display: block;
+    width: 100%;
+  }
+
+  .widget > .left > i {
+    padding: 0 0 15px 0;
+  }
+
+  .widget > .right {
+    float: none;
+    flex-wrap: unset;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer {
+    display: block;
+    flex-wrap: unset;
+  }
+
+  .footer > .left {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer > .right {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer > .right > ul {
+    text-align: inherit;
+  }
+
+  .footer > .right > ul > li {
+    display: block;
+  }
+
+  .footer > .right > ul > li::before {
+    content: "";
+    padding: 0;
+  }
+}
