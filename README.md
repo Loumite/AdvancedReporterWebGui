@@ -6,6 +6,15 @@ It is a website implementation for the AdvancedReporter minecraft plugin with wi
 Upload all your files without the **database.sql** to your web host. For example upload your files in the **htdocs** folder if you are using **xampp**
 ***
 ### 2. Second Step
+Change the **htaccess.txt** name to **.htaccess** and after that go to **inc/database.php** and change to following things to:
+```php
+$this->_dbhost = "your database host name";
+$this->_dbuser = "your database username";
+$this->_dbpass = "your database password";
+$this->_dbname = "your database name";
+```
+***
+### 3. Third Step
 Open up the **phpmyadmin** and then edit the **database.sql** and change the following things:
 ```sql
 INSERT INTO settings (name, type, value) VALUES ('website_scheme', 'string', 'http://');
@@ -16,10 +25,10 @@ INSERT INTO settings (name, type, value) VALUES ('table_name', 'string', 'advanc
 2. Please change the **localhost** to your domain name what you are using for the website.
 3. The third row is for the AdvancedReporter's table name. If you leaved it on default on the plugin's config don't change it.
 ***
-### 3. Third Step
+### 4. Fourth Step
 After you are done with the editing import the **database.sql** file to your database via **phpmyadmin**
 ***
-### 4. Fourth Step
+### 5. Fifth Step
 Now you can login with the following credentials:
 ##### **Email:** _demo@example.com_
 ##### **Password:** _demo123_
