@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^$ ./inc/rti.php
+
+RewriteRule ^page/$ ./inc/rti.php
+RewriteRule ^page/([a-zA-Z0-9_-]+)$ ./index.php?page=$1
+RewriteRule ^page/change-password/([a-zA-Z0-9_]+)$ ./index.php?page=change-password&key=$1
+RewriteRule ^page/logout/([a-zA-Z0-9]+)$ ./index.php?page=logout&key=$1
+
+RewriteRule ^module/$ ./inc/rti.php
+RewriteRule ^module/([a-zA-Z0-9_-]+)$ ./admin.php?module=$1
+RewriteRule ^module/report/([0-9]+)$ ./admin.php?module=report&id=$1
